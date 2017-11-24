@@ -1,0 +1,14 @@
+<!-- Put in the application layout but it did not show -->
+
+<h1> All Transactions </h1>
+
+<%= link_to 'Create a New Transactions', new_transaction_path %>
+
+
+<ul>
+<% @transactions.each do |transaction| %>
+  <li><%= link_to transaction.date.to_date, transaction_path(id:transaction.id) %></li>
+<% end %>
+</ul>
+
+
