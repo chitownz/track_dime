@@ -40,18 +40,14 @@
     </p>
 
 
-     
-        <div class='col-lg-6'>
-        <%= render 'google_map', transaction: @transaction %>
-        </div>
+    <div class='col-lg-6'>
+    <%= render 'google_map', transaction: @transaction %>
+    </div>
       
-         
-
 
     <div class="control-group">
       <div class="controls">
-         <%= link_to 'Back', transactions_path, class: 'btn btn-default' %>
-        <%= link_to 'Edit', edit_transaction_path(@transaction), class: 'btn btn-default' %> 
+         <%= link_to 'Back to transaction', transactions_path, class: 'btn btn-default' %>
       </div>
     </div>
 

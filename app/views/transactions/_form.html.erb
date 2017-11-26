@@ -31,7 +31,7 @@
     <div class="control-group">
       <%= form.label :category, class: 'control-label' %>
       <div class="controls">
-      <%= collection_select(:transactions, :category_id, Category.all, :id, :main, {}, {:multiple => false}) %>
+      <%= collection_select(:transaction, :category_id, Category.all, :id, :main, {}, {:multiple => false}) %>
       <%= link_to 'Update Category', categories_path, class: 'btn btn-default' %>
       </div>
     </div> 
@@ -67,8 +67,8 @@
 
     <div class="control-group">
       <div class="controls">
-      <%= link_to 'Back', transactions_path, class: 'btn btn-default' %>
-      <%= form.submit 'Submit', class: 'btn btn-default' %>
+      <%= link_to 'Back to transaction', transactions_path, class: 'btn btn-default' %>
+      <%= form.submit 'Update', class: 'btn btn-default' %>
       </div>
     </div>
 
