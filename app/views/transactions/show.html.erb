@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="center-block"></div>
+  <h1 style="margin-left: ;">Transaction Detail</h1>
+
+    <p id="notice"><%= notice %></p>
+
+    <p>
+      <strong>Date:</strong>
+      <%= @transaction.date.to_date %>
+    </p>
+
+    <p>
+      <strong>Title:</strong>
+      <%= @transaction.title %>
+    </p>
+
+    <p>
+      <strong>Category:</strong>
+      <%= @transaction.category_id %>
+    </p>
+
+    <p>
+      <strong>Transaction type:</strong>
+      <%= @transaction.transaction_type %>
+    </p>
+
+    <p>
+      <strong>Description:</strong>
+      <%= @transaction.description %>
+    </p>
+
+    <p>
+      <strong>Amount:</strong>
+      <%= number_to_currency(@transaction.amount) %>
+    </p>
+    
+    <p>
+      <strong>Address:</strong>
+      <%= @transaction.address %>
+    </p>
+
+
+     
+        <div class='col-lg-6'>
+        <%= render 'google_map', transaction: @transaction %>
+        </div>
+      
+         
+
+
+    <div class="control-group">
+      <div class="controls">
+         <%= link_to 'Back', transactions_path, class: 'btn btn-default' %>
+        <%= link_to 'Edit', edit_transaction_path(@transaction), class: 'btn btn-default' %> 
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+

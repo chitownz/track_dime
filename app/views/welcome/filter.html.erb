@@ -1,0 +1,12 @@
+<h1 align="center">Filter Page</h1>
+<p align="center">Please filter your transactions by date here.</p>
+
+<div class="row">
+  <div class="pagination-centered">
+    <%= form_tag transactions_path, method: :get do %>
+      <%= text_field_tag 'filter[date_form', @filter.date_from %>
+      <%= text_field_tag 'filter[date_to', @filter.date_to %><br>
+      <%= submit_tag 'Filter', class: 'btn filter-button' %>
+      <% end %>
+  </div>
+</div>

@@ -1,14 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TrackDime</title>
+    <title>Budget</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
   </head>
 
   <body>
+
+      <ul class="nav nav-tabs">
+        <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "About Me", welcome_about_path %></li>
+        <li><%= link_to "Contact", welcome_contact_path %></li>
+        <li><%= link_to "Filter", welcome_filter_path %></li>
+        <li><%= link_to "Transactions", transactions_path %></li>
+        
+        <% if current_user %>
+        <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+        <% else %>
+        <li><%= link_to "Sign Up", new_user_registration_path %></li>
+        <li><%= link_to "Sign In", new_user_session_path %></li>
+        <% end %>
+      </ul>
+
     <%= yield %>
+
   </body>
 </html>

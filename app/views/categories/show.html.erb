@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="center-block"></div>
+  <h1 style="margin-left">Category Detail</h1>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Main:</strong>
+  <%= @category.main %>
+</p>
+
+<p>
+  <strong>Sub:</strong>
+  <%= @category.sub %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @category.description %>
+</p>
+
+    <div class="control-group">
+      <div class="controls">
+         <%= link_to 'Back', categories_path, class: 'btn btn-default' %>
+        <%= link_to 'Edit', edit_category_path(@category), class: 'btn btn-default' %> 
+      </div>
+    </div>
+
+  </div>
+</div>
+

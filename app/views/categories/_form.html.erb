@@ -1,0 +1,45 @@
+<div class="row">
+
+<%= form_for @category, html: {class: 'form-horizontal'}  do |form| %>
+  <% if category.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(category.errors.count, "error") %> prohibited this category from being saved:</h2>
+
+      <ul>
+      <% category.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="control-group">
+    <%= form.label :main, class: 'control-label' %>
+    <div class="controls">
+    <%= form.text_field :main, id: :category_main %>
+  </div>
+  </div>
+
+  <div class="control-group">
+    <%= form.label :sub, class: 'control-label' %>
+    <div class="controls">
+    <%= form.text_field :sub, id: :category_sub %>
+  </div>
+  </div>
+
+  <div class="control-group">
+    <%= form.label :description, class: 'control-label' %>
+    <div class="controls">
+    <%= form.text_field :description, id: :category_description %>
+  </div>
+  </div>
+
+  <div class="control-group">
+      <div class="controls">
+      <%= link_to 'Back', categories_path, class: 'btn btn-default' %>
+      <%= form.submit 'Submit', class: 'btn btn-default' %>
+      </div>
+    </div>
+  
+<% end %>
+</div>
