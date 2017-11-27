@@ -1,61 +1,131 @@
-<h1 align="center">about me</h>
-
-<p align="center"><h4 align="center"><br>
-
-I am a Veteran turned Technology professional.</br> I enjoy turning complex problems into simple, beautiful and intuitive interface designs.</br> When I'm not coding or pushing pixels, you'll find me in the gym</br> or along the lake shore drive running.</h4>
-</p>
-<br>
-
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
 <style>
-.newspaper {
-    -webkit-column-count: 2; /* Chrome, Safari, Opera */
-    -moz-column-count: 2; /* Firefox */
-    column-count: 2;
-    -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
-    -moz-column-gap: 40px; /* Firefox */
-    column-gap: 40px;
-    -webkit-column-rule-style: solid; /* Chrome, Safari, Opera */
-    -moz-column-rule-style: solid; /* Firefox */
-    column-rule-style: solid;
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
 }
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+   
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+}
+
+
+
 </style>
 </head>
 <body>
 
+<div class="container">
 
-<div class="newspaper">
-<div class="myClass" style="margin-left: 420px;">
-  <ul> <strong> Coding Skill </strong>
-    <li>Git</li>
-    <li>Ruby</li>
-    <li>JavaScript</li>
-    <li>HTML</li>
-    <li>CSS</li>
-    <li>Ruby-on-Rails</li>
-    <li>React.js</li>
-  </ul>
-</div>
-<div class="myClass" style="margin-left: 60px;">
-  <ul> <strong> Random facts </strong>
+<header>
+   <h1>about Me</h1>
+</header>
+  
+<nav>
+  
+  <%= image_tag("mickeybw.jpg") %>
+  
+</nav>
 
-    <li>I worship Jedi Master Yoda.</li>
-    <li>I don’t need a coffee but a big breakfast.</li>
-    <li>I wanna fly like a superman.  </li>
-    <li>I love Jazz/Blue music...Woo..I am a classy one.</li>
-    <li>I use a Mac...not iPhone.</li>
-  </ul>
+<article>
+  <h3>Mickey Worlderful !</h3>
+  <p>I am a Veteran turned Technology professional. I enjoy turning complex problems into simple, beautiful and intuitive interface designs. When I'm not coding or pushing pixels, you'll find me in the gym or along the lake shore running.</p>
+  
+<div id="contentBox" style="margin:10px auto; width:100%">
+
+     <div id="column1" style="float:left; margin:0;width:33%;">
+        <div class="myClass" style="margin-left: 0px;">
+          <ul> <strong> Who Am I? </strong>
+            <li>A Veteran (Served in Korea/Germany/Romania)</li>
+            <li>An Engineering/Accounting Graduate Student</li>
+            <li>A Trader & Finance Guy + Technology Gig</li>
+            <li>A World Traveler > 40 countries around the world </li>
+            <li>A Dreamer $$ Ambitious Man who love Freedom...</li>
+          </ul>
+        </div>
+    </div>
+
+
+    <div id="column2" style="float:left; margin:0;width:33%;">
+        <div class="myClass" style="margin-left: 0px;">
+          <ul> <strong> Random facts </strong>
+            <li>I worship Jedi Master Yoda & Walking Dead</li>
+            <li>I don’t need a coffee but a BIG breakfast</li>
+            <li>I wanna fly just like a superman </li>
+            <li>I love Jazz/Blue music...Woo..I am a classy one</li>
+            <li>I use a Mac...not iPhone</li>
+          </ul>
+        </div>
+    </div>
+
+    <div id="column3" style="float:left; margin:0; width:33%;">
+         <div class="myClass" style="margin-left: 0px;">
+          <ul> <strong> Coding Skill </strong>
+            <li>Git / GitHub </li>
+            <li>Ruby / Ruby-on-Rails / React.js</li>
+            <li>JavaScript / HTML / CSS</li>
+            <li>SQL / TDD / OOP / APIs</li>
+            <li>SAFe® 4 Certified Practitioner (Agile/Scrum)</li>
+          </ul>
+        </div>
+    </div>
+
 </div>
-</div>
+    
+</article>
+
+<!-- <footer>Copyright &copy; https://trackdime.herokuapp.com/</footer> -->
 
 </div>
 
 </body>
 </html>
-
 
