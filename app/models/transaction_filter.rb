@@ -3,8 +3,8 @@ class TransactionFilter
 
   def initialize(params)
     params ||= {}
-    @date_from = parsed_date(params[:date_from], 3.months.ago.to_date.to_s)
-    @date_to = parsed_date(params[:date_to], Date.today.to_s)
+    @date_from = parsed_date(params[:date_from], 1.year.ago.to_date.to_s)
+    @date_to = parsed_date(params[:date_to], DateTime.now.to_s)
   end
 
   def scope

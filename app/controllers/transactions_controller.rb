@@ -16,6 +16,7 @@ class TransactionsController < ApplicationController
   end
 
   def filter
+    print params[:filter]
     @filter = TransactionFilter.new(params[:filter])
     @transactions =@filter.scope
   end
