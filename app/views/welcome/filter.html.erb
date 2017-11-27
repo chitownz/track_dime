@@ -4,8 +4,8 @@
 <div class="row">
   <div class="pagination-centered">
     <%= form_tag transactions_path, method: :get do %>
-      <%= text_field_tag 'filter[date_from', @filter.date_from %>
-      <%= text_field_tag 'filter[date_to', @filter.date_to %><br>
+      <%= date_field_tag 'filter[date_from', @filter.date_from %>
+      <%= date_field_tag 'filter[date_to', @filter.date_to %><br>
       <%= submit_tag 'Filter', class: 'btn filter-button' %>
       <% end %>
   </div>
